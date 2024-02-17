@@ -19,8 +19,12 @@ const int buttonPin_down = 21;
 int buttonState_left = 0;
 int buttonState_right = 0;
 int buttonState_up = 0;
-int buttonState_down = 0;  
-
+int buttonState_down = 0;
+// initialize previous button states as LOW
+int prevButtonState_left = 0;
+int prevButtonState_right = 0;
+int prevButtonState_up = 0;
+int prevButtonState_down = 0;
 // action keys
 char left;
 char right;
@@ -45,22 +49,25 @@ void loop() {
   buttonState_up = digitalRead(buttonPin_up);
   buttonState_down = digitalRead(buttonPin_down);
   // press keys associated with respective buttons
-  if (buttonState_left==HIGH) {
+  if (prevButtonState_left==LOW) {
     Keyboard.press(left);
     Keyboard.releaseAll();
   }
-  if (buttonState_right==HIGH) {
+  if (prevButtonState_right==LOW) {
     Keyboard.press(right);
     Keyboard.releaseAll();
   }
-  if (buttonState_up==HIGH) {
+  if (prevButtonState_up==LOW) {
     Keyboard.press(up);
     Keyboard.releaseAll();
   }
-  if (buttonState_down==HIGH) {
+  if (prevButtonState_down==LOW) {
     Keyboard.press(down);
     Keyboard.releaseAll();
   }
-
+  prevButtonState_left = buttonState_left;
+  prevButtonState_right = buttonState_right;
+  prevButtonState_up = buttonState_up;
+  prevButtonState_down = buttonState_down;
   // Keyboard.end()
 }
