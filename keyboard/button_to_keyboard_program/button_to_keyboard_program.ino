@@ -33,6 +33,11 @@ char down;
 
 void setup() {
   // put your setup code here, to run once:
+  // sets following pins as input pins
+  pinMode(18, INPUT);
+  pinMode(19,INPUT);
+  pinMode(20,INPUT);
+  pinMode(21,INPUT);
   // initialize control over keyboard
   Keyboard.begin();
   left = 	KEY_LEFT_ARROW;
