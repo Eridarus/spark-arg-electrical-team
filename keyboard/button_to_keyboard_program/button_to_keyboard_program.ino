@@ -49,19 +49,19 @@ void loop() {
   buttonState_up = digitalRead(buttonPin_up);
   buttonState_down = digitalRead(buttonPin_down);
   // press keys associated with respective buttons
-  if (prevButtonState_left==LOW) {
+  if (prevButtonState_left==LOW && buttonState_left==HIGH) {
     Keyboard.press(left);
     Keyboard.releaseAll();
   }
-  if (prevButtonState_right==LOW) {
+  if (prevButtonState_right==LOW && buttonState_left==HIGH) {
     Keyboard.press(right);
     Keyboard.releaseAll();
   }
-  if (prevButtonState_up==LOW) {
+  if (prevButtonState_up==LOW && buttonState_left==HIGH) {
     Keyboard.press(up);
     Keyboard.releaseAll();
   }
-  if (prevButtonState_down==LOW) {
+  if (prevButtonState_down==LOW && buttonState_left==HIGH) {
     Keyboard.press(down);
     Keyboard.releaseAll();
   }
