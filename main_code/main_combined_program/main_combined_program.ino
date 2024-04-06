@@ -12,14 +12,14 @@
 */
 
 // constants - the number associated with the pushbutton pin
-const int buttonPin_left = 18;
-const int buttonPin_right = 19;
-const int buttonPin_up = 20;
-const int buttonPin_down = 21;
-const int buttonPin_alt_left = 6;
-const int buttonPin_alt_right = 7;
-const int buttonPin_alt_up = 8;
-const int buttonPin_alt_down = 9;
+const int buttonPin_left = 4;
+const int buttonPin_right = 5;
+const int buttonPin_up = 6;
+const int buttonPin_down = 7;
+const int buttonPin_alt_left = 14;
+const int buttonPin_alt_right = 15;
+const int buttonPin_alt_up = 18;
+const int buttonPin_alt_down = 19;
 
 // initial value for variable for reading the pushbutton status
 int buttonState_left = 0;
