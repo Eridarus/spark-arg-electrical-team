@@ -52,14 +52,14 @@ char alt_down;
 void setup() {
   // put your setup code here, to run once:
   // sets following pins as input pins
-  pinMode(18, INPUT);
-  pinMode(19, INPUT);
-  pinMode(20, INPUT);
-  pinMode(21, INPUT);
-  pinMode(6, INPUT);
-  pinMode(7, INPUT);
-  pinMode(8, INPUT);
-  pinMode(9, INPUT);
+  pinMode(buttonPin_left, INPUT);
+  pinMode(buttonPin_right, INPUT);
+  pinMode(buttonPin_up, INPUT);
+  pinMode(buttonPin_down, INPUT);
+  pinMode(buttonPin_alt_left, INPUT);
+  pinMode(buttonPin_alt_right, INPUT);
+  pinMode(buttonPin_alt_up, INPUT);
+  pinMode(buttonPin_alt_down, INPUT);
   // initialize control over keyboard
   Keyboard.begin();
   left = 	KEY_LEFT_ARROW;
@@ -73,7 +73,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:swadswswwwwwwwwswswswwwwww
+  // put your main code here, to run repeatedly:
 // read the state of the pushbutton value:
   buttonState_left = digitalRead(buttonPin_left);
   buttonState_right = digitalRead(buttonPin_right);
